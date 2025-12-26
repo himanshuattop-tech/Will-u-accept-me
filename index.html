@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Will You Accept Me?</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    max-width: 350px;
+    width: 90%;
+}
+
+h1 {
+    color: #ff4d6d;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#yesBtn {
+    background: #ff4d6d;
+    color: white;
+}
+
+#yesBtn:hover {
+    transform: scale(1.1);
+}
+
+#noBtn {
+    background: #ddd;
+    color: #333;
+    position: relative;
+}
+
+.message {
+    display: none;
+    margin-top: 20px;
+    font-size: 22px;
+    color: #ff4d6d;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Hey 💖</h1>
+    <p>I've been meaning to ask you something special...</p>
+    <h2>Will you accept me as your boyfriend? 🥺</h2>
+
+    <div class="buttons">
+        <button id="yesBtn" onclick="yesClicked()">Yes 💘</button>
+        <button id="noBtn" onmouseover="moveNo()">No 🙃</button>
+    </div>
+
+    <div class="message" id="msg">
+        YAY!!! 💕 I’m the luckiest person ever 😍
+    </div>
+</div>
+
+<script>
+function yesClicked() {
+    document.getElementById("msg").style.display = "block";
+}
+
+function moveNo() {
+    const noBtn = document.getElementById("noBtn");
+    const x = Math.random() * 200 - 100;
+    const y = Math.random() * 200 - 100;
+    noBtn.style.transform = `translate(${x}px, ${y}px)`;
+}
+</script>
+
+</body>
+</html>
